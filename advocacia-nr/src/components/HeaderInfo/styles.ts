@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   height: 2rem;
-  width: 100vw;
+  width: 100%;
   background: #12110f;
 
   border-bottom: 2px #dbdad8 solid;
@@ -23,22 +23,4 @@ export const Content = styled.div`
 
 export const ContactInfo = styled.div`
   display: flex;
-`;
-export const ContactActions = styled.div`
-  display: flex;
-
-  > div {
-    width: 1.5rem;
-    height: 1.5rem;
-
-    border-radius: 50%;
-
-    background: #dbdad8;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin-left: 0.7rem;
-  }
 `;

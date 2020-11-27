@@ -7,8 +7,6 @@ interface MenuItemProps {
 export const Container = styled.div`
   display: flex;
   height: 2rem;
-
-  margin-top: 2rem;
 `;
 
 export const MenuItem = styled.div<MenuItemProps>`

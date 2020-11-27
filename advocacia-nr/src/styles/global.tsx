@@ -9,7 +9,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background: #EBEBEB;
+    background:#DBDAD8;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -27,4 +27,9 @@ export default createGlobalStyle`
     cursor: pointer;
 
   }
+
+  html {
+    overflow: auto;
+}
+
 `;
