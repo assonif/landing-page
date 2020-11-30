@@ -2,11 +2,17 @@ import React from "react";
 
 import { Container } from "./styles";
 
+import { Carousel } from "react-responsive-carousel";
+
 import OfficeImage from "../../assets/office.png";
 
-const ImageCarroussel: React.FC = () => {
+interface ImageCarrousselProps {
+  isSticky: boolean;
+}
+
+const ImageCarroussel: React.FC<ImageCarrousselProps> = ({ isSticky }) => {
   return (
-    <Container>
+    <Container isSticky={isSticky}>
       <img src={OfficeImage} alt="office" />
     </Container>
   );

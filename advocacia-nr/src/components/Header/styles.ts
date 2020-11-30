@@ -6,6 +6,8 @@ interface ContainerProps {
 
 export const Anchor = styled.div`
   position: fixed;
+  width: 100%;
+  z-index: 2;
 `;
 
 export const Container = styled.div<ContainerProps>`
@@ -14,6 +16,8 @@ export const Container = styled.div<ContainerProps>`
   display: flex;
 
   padding: 0 2rem;
+
+  transition: all 0.2s;
 
   ${(props) =>
     props.isSticky &&
@@ -35,6 +39,7 @@ export const Container = styled.div<ContainerProps>`
 `;
 
 export const Logo = styled.div<ContainerProps>`
+  transition: all 0.2s;
   ${(props) =>
     props.isSticky &&
     css`

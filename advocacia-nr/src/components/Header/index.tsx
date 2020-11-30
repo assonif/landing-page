@@ -7,15 +7,16 @@ import Menu from "../Menu";
 
 import { Anchor, Container, Logo } from "./styles";
 
-const Header: React.FC = () => {
-  const [isSticky, setIsSticky] = useState(false);
+interface HeaderProps {
+  isSticky: boolean;
+  setIsSticky: (value: boolean) => void;
+}
 
+const Header: React.FC<HeaderProps> = ({ isSticky, setIsSticky }) => {
   const ref = useRef(null);
 
   const handleScroll = () => {
-    if (ref.current) setIsSticky(window.scrollY > 50);
-
-    console.log("SCROLLLL");
+    if (ref.current) setIsSticky(window.scrollY > 70);
   };
 
   useEffect(() => {
