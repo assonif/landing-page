@@ -17,6 +17,7 @@ export const Container = styled.div`
   margin-left: 2rem;
 
   width: 28rem;
+
   > input {
     margin-top: 1rem;
     height: 2.5rem;
