@@ -12,7 +12,7 @@ const Main: React.FC = () => {
     <>
       <Header isSticky={isSticky} setIsSticky={setIsSticky} />
       <ImageCarroussel isSticky={isSticky} />
-      <Scrollabe />
+      <Scrollabe isSticky={isSticky} />
     </>
   );
 };

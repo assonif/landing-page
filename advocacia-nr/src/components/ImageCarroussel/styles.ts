@@ -7,6 +7,7 @@ interface ContainerProps {
 export const Container = styled.div<ContainerProps>`
   width: 100%;
   z-index: auto;
+  transition: all 0.4s;
   img {
     width: 100%;
   }

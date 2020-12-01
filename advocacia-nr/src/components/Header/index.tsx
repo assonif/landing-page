@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({ isSticky, setIsSticky }) => {
   const ref = useRef(null);
 
   const handleScroll = () => {
-    if (ref.current) setIsSticky(window.scrollY > 70);
+    if (ref.current) setIsSticky(window.scrollY > 0);
   };
 
   useEffect(() => {
