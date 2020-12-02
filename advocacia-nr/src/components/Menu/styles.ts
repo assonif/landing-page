@@ -12,7 +12,7 @@ export const Container = styled.div`
 export const MenuItem = styled.div<MenuItemProps>`
   background: ${(props) => (props.selected ? "#d3a73c" : "none")};
 
-  margin-left: 1rem;
+  margin-left: 0.2rem;
   padding: 0 0.8rem;
 
   display: flex;
@@ -29,5 +29,13 @@ export const MenuItem = styled.div<MenuItemProps>`
 
   &:first-child {
     margin-left: 0;
+  }
+
+  transition: all 0.3s;
+
+  &:hover {
+    > span {
+      color: ${(props) => (!props.selected ? "#d3a73c" : "none")};
+    }
   }
 `;

@@ -10,13 +10,20 @@ import { Anchor, Container, Logo } from "./styles";
 interface HeaderProps {
   isSticky: boolean;
   setIsSticky: (value: boolean) => void;
+  position: number;
+  setPosition: (value: number) => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ isSticky, setIsSticky }) => {
+const Header: React.FC<HeaderProps> = ({
+  isSticky,
+  setIsSticky,
+  position,
+  setPosition,
+}) => {
   const ref = useRef(null);
 
   const handleScroll = () => {
-    if (ref.current) setIsSticky(window.scrollY > 70);
+    if (ref.current) setIsSticky(window.scrollY > 0);
   };
 
   useEffect(() => {
@@ -38,7 +45,7 @@ const Header: React.FC<HeaderProps> = ({ isSticky, setIsSticky }) => {
             <p>CONSULTORIA JURÍDICA E ADMINISTRATIVA</p>
           </div>
         </Logo>
-        <Menu />
+        <Menu position={position} setPosition={setPosition} />
       </Container>
     </Anchor>
   );
