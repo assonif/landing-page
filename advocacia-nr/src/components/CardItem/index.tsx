@@ -1,13 +1,13 @@
 import React from "react";
 
-import House from "../../assets/house.jpg";
+// import House from "../../assets/house.jpg";
 
 import { Container } from "./styles";
 
 const CardItem: React.FC = () => {
   return (
     <Container>
-      <img src={House} alt="" />
+      <img src="" alt="" />
       <div>
         <strong>Direito do Consumidor </strong>
         <p>
