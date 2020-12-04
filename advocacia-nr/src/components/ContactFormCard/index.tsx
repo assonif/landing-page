@@ -11,8 +11,8 @@ const ContactFormCard: React.FC = () => {
       <input type="text" placeholder="Telefone*" />
       <textarea
         name=""
-        cols="30"
-        rows="10"
+        cols={30}
+        rows={10}
         placeholder="Digite sua mensagem*"
       ></textarea>
 

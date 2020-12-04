@@ -2,8 +2,6 @@ import React from "react";
 
 import { Container } from "./styles";
 
-import { Carousel } from "react-responsive-carousel";
-
 import OfficeImage from "../../assets/office.png";
 
 interface ImageCarrousselProps {

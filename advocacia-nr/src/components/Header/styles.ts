@@ -36,6 +36,21 @@ export const Container = styled.div<ContainerProps>`
       align-items: center;
       justify-content: center;
     `}
+
+    @media(max-width: 767px) {
+    flex-direction: column;
+    height: 25rem;
+    position: relative;
+
+    ${(props) =>
+      props.isSticky &&
+      css`
+        height: 7rem;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      `}
+  }
 `;
 
 export const Logo = styled.div<ContainerProps>`
