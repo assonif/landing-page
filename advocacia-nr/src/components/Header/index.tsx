@@ -4,6 +4,7 @@ import LogoImage from "../../assets/logo.png";
 
 import HeaderInfo from "../HeaderInfo";
 import Menu from "../Menu";
+import Burguer from "../Burguer";
 
 import { Anchor, Container, Logo } from "./styles";
 
@@ -20,11 +21,18 @@ const Header: React.FC<HeaderProps> = ({
   position,
   setPosition,
 }) => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [wasClicked, setWasClicked] = useState(false);
+
   const ref = useRef(null);
 
   const handleScroll = () => {
     if (ref.current) setIsSticky(window.scrollY > 0);
   };
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 767);
+  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -36,7 +44,8 @@ const Header: React.FC<HeaderProps> = ({
 
   return (
     <Anchor>
-      <HeaderInfo />
+      {!isMobile && <HeaderInfo />}
+
       <Container ref={ref} isSticky={isSticky}>
         <Logo isSticky={isSticky}>
           <img src={LogoImage} alt="" />
@@ -45,7 +54,11 @@ const Header: React.FC<HeaderProps> = ({
             <p>CONSULTORIA JURÍDICA E ADMINISTRATIVA</p>
           </div>
         </Logo>
-        <Menu position={position} setPosition={setPosition} />
+        {isMobile && <Burguer />}
+        {!isMobile ||
+          (wasClicked && (
+            <Menu position={position} setPosition={setPosition} />
+          ))}
       </Container>
     </Anchor>
   );

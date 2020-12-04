@@ -17,7 +17,6 @@ const Menu: React.FC<MenuProps> = ({ position, setPosition }) => {
   ]);
 
   const handleClick = (index) => {
-    console.log(index);
     switch (index) {
       case 1:
         window.scrollTo(0, 565);
