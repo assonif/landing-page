@@ -50,6 +50,15 @@ export const Container = styled.div<ContainerProps>`
         align-items: center;
         justify-content: space-between;
       `}
+
+    ${(props) =>
+      !props.isSticky &&
+      css`
+        height: 50%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      `}
   }
 `;
 

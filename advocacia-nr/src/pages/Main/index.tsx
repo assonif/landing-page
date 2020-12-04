@@ -5,6 +5,8 @@ import Header from "../../components/Header";
 import ImageCarroussel from "../../components/ImageCarroussel";
 import Scrollabe from "../../components/Scrollabe";
 
+import { Container } from "./styles";
+
 const Main: React.FC = () => {
   const [isSticky, setIsSticky] = useState(false);
   const [position, setPosition] = useState(0);
@@ -32,16 +34,16 @@ const Main: React.FC = () => {
   }, []);
 
   return (
-    <>
+    <Container>
       <Header
         isSticky={isSticky}
         setIsSticky={setIsSticky}
         position={position}
         setPosition={setPosition}
       />
-      <ImageCarroussel isSticky={isSticky} />
+      {/* <ImageCarroussel isSticky={isSticky} /> */}
       <Scrollabe isSticky={isSticky} />
-    </>
+    </Container>
   );
 };
 
